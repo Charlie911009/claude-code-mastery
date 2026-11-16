@@ -1,0 +1,13 @@
+{
+  "model": "opusplan",
+  "statusLine": {
+    "type": "command",
+    "command": "input=$(cat); current_dir=$(echo \"$input\" | jq -r '.workspace.current_dir'); model_name=$(echo \"$input\" | jq -r '.model.display_name'); echo \"$(basename \"$current_dir\") | $model_name\""
+  },
+  "permissions": {
+    "allow": [
+      "Bash(npm init *)",
+      "Bash(npm install *)"
+    ]
+  }
+}
